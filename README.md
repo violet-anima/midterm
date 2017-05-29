@@ -1,3 +1,5 @@
+## These files are from another midterm repo: https://github.com/rickyforr/midterm ##
+
 
 ## THE LEARNING WALL ##
 
