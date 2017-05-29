@@ -1,0 +1,132 @@
+@import "navbar.css";
+
+
+$primary-color: #47d1d1;
+$secondary-color: white;
+$navbar-black: #222;
+$main-font: 'Libre Franklin', sans-serif;
+
+span {
+  margin: 10px 10px;
+  background-color:$primary-color;
+  max-width: 550px;
+  padding-bottom: 5px;
+}
+
+
+
+.user-field{
+  font-family: $main-font;
+  font-weight: bold;
+  background-color: rgba(71, 209, 209, 0.74);
+  border: 2px solid #33cccc;
+  border-radius: 20px
+
+}
+
+.login-field{
+ background: linear-gradient(rgb(34, 34, 34), rgba(34, 34, 34, 0.88));
+ background-size: 1200px;
+ font-family: 'Libre Franklin', sans-serif;
+ font-weight: bold;
+ border-radius: 20px
+}
+
+
+.login-field h3{
+  font-size: 50px;
+  color: $secondary-color;
+}
+
+
+.label-edit{
+  height: 30px;
+  width: 55%;
+  margin-top: 25px;
+  color: $secondary-color;
+  font-family: $main-font;
+}
+
+.edit{
+  height: 35px;
+  width: 55%;
+  border-radius: 5px;
+}
+
+.edit-button{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 55%;
+  font-size: 24px;
+  border-radius: 20px;
+  background-color: transparent;
+  border-style: solid;
+  color: $secondary-color;
+  width: 150px;
+}
+
+.edit-button:hover {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 55%;
+  font-size: 24px;
+  border-radius: 20px;
+  background-color: white;
+  border-style: solid;
+  color: $primary-color;
+  width: 150px;
+}
+
+
+/* resource id page */
+.resource_id {
+  background-color: $primary-color;
+}
+
+.resource_id h2 {
+  font-size: 35px;
+}
+
+.container {
+    padding-bottom: 30px;
+}
+
+#comment {
+    border-left: 3.5px solid $primary-color;
+    border-bottom: 3.5px solid $primary-color;
+    border-radius: 20px;
+    background-color: $secondary-color;
+    margin-bottom: 10px;
+}
+.comment{
+    padding-top: 10px;
+
+}
+
+#comment label{
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+#comment h6{
+  margin-top: 0;
+}
+
+h3.add-new {
+  margin-top: 30px;
+  color: $secondary-color;
+  border-width: 2px;
+  padding: 0px;
+
+  border-radius: 20px;
+}
+
+h3.add-new:hover {
+  color: grey;
+  border-width: 2px;
+  padding: 0px;
+
+  border-radius: 20px;
+  margin-top: 30px;
+  }
+

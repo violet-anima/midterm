@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Page</title>
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+
+     <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300i,400,700,700i" rel="stylesheet">
+
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+  </head>
+  <body>
+    <nav class='navbar navbar-inverse navbar-fixed-top'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <a class='navbar-brand' href='/#'>The Learning Wall</a>
+      </div><form method="POST" action="/new_resource/search" >
+      <ul class='nav navbar-nav navbar-right' >
+
+        <li>
+            <input type="text" class="form-control search-bar"  name="key"placeholder="Search...">
+        </li>
+        <li>
+            <button type ="submit" class="btn btn-default search-bar">Submit</button>
+        </li>
+      </form>
+        <li><a href="/login/resource">Resources</a></li>
+        <li><a href="/login/edit">Edit Profile</a></li>
+        <li><a href='/'>Logout</a></li>
+      </ul>
+      </div>
+    </nav>
+
+    <div class='user-field container text-center'>
+    <div class="row">
+    <h3 class='add-new'>Add a New Learning Tutorial</h3>
+      <form class='new-resource' method= "POST" action='../new_resource'>
+
+          <section class="col-sm-center-block" action='/#' >
+            <div>
+              <label class="label-edit"><b>URL</b></label>
+              <input class="edit" type="text" placeholder="Enter URL" name="url" required>
+            </div>
+
+            <div>
+              <label class="label-edit"><b>Title</b></label>
+              <input class="edit" type="text" placeholder="Enter a Title" name="title" required>
+            </div>
+
+            <div>
+              <label class="label-edit"><b>Description</b></label>
+              <input class="edit" type="text" placeholder="Enter a Description" name="dscript" required>
+            </div>
+
+            <div align="center">
+              <label class="label-edit" for="tutorialtype" >Categories</label>
+              <select class="edit form-control">
+                <option>Choose</option>
+                <option value="Art">Art</option>
+                <option value="Biology">Biology</option>
+                <option value="Coding">Coding</option>
+                <option value="Business">Business</option>
+                <option value="Music">Music</option>
+                <option value="Tech">Tech</option>
+                <option value="Food">Food</option>
+                <option value="Philosophy">Philosophy</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Photography">Photography</option>
+              </select>
+            </div>
+            <button class="edit-button" type='submit'>Submit</button>
+          </section>
+        </div>
+    </div>
+</form>
+
+    <div class='container'>
+      <div class='row justify-content-end'>
+        <% for(var i=0; i<resources.length; i++) {%>
+         <span class=" col-sm-12 col-md-6">
+            <div><h4 style="color: white;"><%= resources[i].title  %></h4></div>
+            <div class="star s-0.5" data-default="0.5" style="color: white;"><span> 0.5 stars</span></div>
+            <iframe class="col-sm-12"  width="420" height="345" src="<%= resources[i].resource_url  %>" ></iframe>
+            <form action="../comment/like" method="post">
+            <button  type="submit" class="btn btn-outline-primary">Like (<%= resources[i].likes_count  %>) </button>
+            <input type="hidden"  name="resourcesId" value="<%= resources[i].id  %>" >
+            </form>
+            <button class="btn btn-info"><a href="/new_resource//comment?resourceId=<%= resources[i].id%>">Comments</a>
+            </button>
+            </span>
+            <% } %>
+
+        </div>
+    </div>
+  </body>
+</html>

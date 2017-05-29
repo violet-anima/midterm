@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>User Page</title>
+
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
+  </head>
+
+    <nav class='navbar navbar-inverse'>
+    <div class='container-fluid'>
+      <div class='navbar-header'>
+        <a class='navbar-brand' href='/#'>Learntrist</a>
+      </div>
+      <ul class='nav navbar-nav navbar-right' >
+        <li><input type="text" name="search" placeholder="Search..."></li>
+         <% if (user) { %>
+         <p style="color:white;">Signed in as <%= user %></p>
+        <li><a href="/resource">Resource</a></li>
+        <li><a href="/uesr_id/edit">Edit Profile</a></li>
+        <form action="/logout" method="post">
+      <button>Sign Out</button>
+    </form>
+
+  <% } else { %>
+    <p>
+      <a href="/register">Register</a>
+    </p>
+    <p>
+      <a href="/login">Sign In</a>
+    </p>
+  <% } %>
+      </ul>
+      </div>
+    </nav>
+
+</html>
