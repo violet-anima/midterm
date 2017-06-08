@@ -1,7 +1,11 @@
 ## These files are from another midterm repo: https://github.com/rickyforr/midterm ##
 
-
 ## THE LEARNING WALL ##
+
+<img width="1276" alt="1registration" src="https://user-images.githubusercontent.com/22466500/26951066-1f765c76-4c5d-11e7-887d-4b13baabfc11.png">
+<img width="1274" alt="2login" src="https://user-images.githubusercontent.com/22466500/26951070-22cdc9d6-4c5d-11e7-90c9-8ce0ca9c7054.png">
+<img width="1260" alt="3index" src="https://user-images.githubusercontent.com/22466500/26951072-24a3ab2c-4c5d-11e7-9ae7-c5806da76e56.png">
+<img width="1259" alt="4" src="https://user-images.githubusercontent.com/22466500/26951073-2605be06-4c5d-11e7-83e5-1da24dcecee8.png">
 
 ## Project Setup
 
@@ -55,9 +59,7 @@ from terminal type:
 knex seed:run
 
 
-
-# DATABASE TABLES #
-
+## DATABASE TABLES #
 ### USERS ###
 id (PK), <br />
 name, <br />
